@@ -1,14 +1,19 @@
 # coding: utf-8
 
+import requests
+import json
 from . import home
-from flask import render_template, redirect, url_for, flash, session, request
+from flask import make_response, render_template, redirect, url_for, flash, session, request
 from werkzeug.security import generate_password_hash
 from .forms import LoginForm, RegisterForm
-from app.models import User, Userlog
+from app.models import User, Userlog, Movie
 from app.models import db
+
 
 @home.route("/")
 def index():
+    # r = requests.get('')
+    # movie = json.dumps(r)
     return render_template("home/index.html")
 
 

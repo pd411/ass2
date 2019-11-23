@@ -2,6 +2,7 @@
 import datetime
 from app import db
 
+
 # 会员
 class User(db.Model):
     __tablename__ = "users"
@@ -54,26 +55,15 @@ class Userlog(db.Model):
         return "<Userlog %r>" % self.id
 
 
-# # 标签
-# class Tag(db.Model):
-#     __tablename__ = "tag"
-#     id = db.Column(db.Integer, primary_key=True)
-#     addtime = db.Column(db.DateTime, index=True, default=datetime.datetime.utcnow())
-#
-#     def __repr__(self):
-#         return "<Tag %r>" % self.name
-#
-#
-# # 电影
-# class Movie(db.Model):
-#     __tablename__ = "movies"
-#     id = db.Column(db.Integer, primary_key=True)
-#     title = db.Column(db.String(255), unique=True)
-#     rating = db.Column(db.Float)
-#     release_time = db.Column(db.String(255))
-#     overview = db.Column(db.String(255))
-#     original_language = db.Column(db.String(100))
-#     poster_path = db.Column(db.String(255))
-#
-#     def __repr__(self):
-#         return "<Movie %r>" % self.title
+class Movie:
+    def __init__(self, title, language, overview, release_time, \
+                 runtime, vote_count, director, star, writer):
+        self.title = title
+        self.language = language
+        self.overview = overview
+        self.release_time = release_time
+        self.runtime = runtime
+        self.vote_count = vote_count
+        self.director = director
+        self.star = star
+        self.writer = writer

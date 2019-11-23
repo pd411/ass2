@@ -7,4 +7,4 @@ home = Blueprint("home", __name__)
 import app.home.views
 
 if __name__ == '__main__':
-    homeApp.run(port=8080)
+    homeApp.run(host='0.0.0.0', port=8080)
