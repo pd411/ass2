@@ -26,5 +26,8 @@ mysql的命令：
 
 ``
     from app import db
+``
+
+``
     db.create_all()
 ``
