@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5fed9b2e-3c79-4613-abc1-7f46b933e7d2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/home/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/home/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,8 +16,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="456">
-                <caret line="26" column="19" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
+              <first_editor relative-caret-position="361">
+                <caret line="27" column="22" lean-forward="true" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
               </first_editor>
               <second_editor />
             </state>
@@ -323,18 +323,18 @@
       <updated>1573723579194</updated>
       <workItem from="1573723581605" duration="406000" />
       <workItem from="1574153431972" duration="957000" />
-      <workItem from="1574392156713" duration="30791000" />
+      <workItem from="1574392156713" duration="30850000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32154000" />
+    <option name="totallyTimeSpent" value="32213000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="512" y="0" width="928" height="900" extended-state="0" />
+    <frame x="538" y="0" width="902" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2866817" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29534882" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -609,8 +609,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="456">
-            <caret line="26" column="19" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
+          <first_editor relative-caret-position="361">
+            <caret line="27" column="22" lean-forward="true" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
           </first_editor>
           <second_editor />
         </state>

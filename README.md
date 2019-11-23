@@ -9,6 +9,7 @@ app是项目文档，项目文档分为两个部分
 ``
     homeApp.config["SQLALCHEMY_DATABASE_URI"] = "mysql+pymysql://root:Unsw1995@localhost:3306/movie"
 ``
+
 中间root:Unsw1995 （username:password）
 mysql的命令：
 
@@ -22,6 +23,7 @@ mysql的命令：
 ## 数据库的migrate:
 在terminal中先切入当前目录输入python
 在输入：
+
 ``
     from app import db
     db.create_all()
