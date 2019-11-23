@@ -33,12 +33,18 @@ def login():
         return redirect(url_for("home.index"))
     return render_template("home/login.html", form=form)
 
+@home.context_processor
+def my_context_processor():
+    user = session.get('user')
+    if user:
+        return {'login_user': user}
+    print(user)
+    return {}
 
 @home.route("/logout")
 def logout():
-    session.pop("user", None)
-    session.pop("user_id", None)
-    return redirect(url_for("home.login"))
+    session.clear()
+    return redirect(url_for("home.index"))
 
 
 @home.route("/register", methods=['GET', 'POST'])
@@ -54,5 +60,7 @@ def register():
         db.session.add(user)
         db.session.commit()
         flash("success sign up!", "ok")
+        session["user"] = user.username
+        session["user_id"] = user.id
         return redirect(url_for("home.index"))
     return render_template("home/register.html", form=form)

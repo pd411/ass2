@@ -23,7 +23,7 @@ class LoginForm(FlaskForm):
         },
     )
     remember_me = BooleanField(
-        label='remember_me',
+        label='Remember me',
         description="Remember Me",
         render_kw={
             "class": "input-checkbox100",

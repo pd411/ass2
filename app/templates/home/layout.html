@@ -33,12 +33,21 @@
                                 <li>
                                     <a href="{{ url_for('home.index') }}">Home</a>
                                 </li>
-                                <li>
-                                    <a href="{{ url_for('home.login') }}">Login</a>
-                                </li>
-                                <li>
-                                    <a href="{{ url_for('home.register') }}">Sign up</a>
-                                </li>
+                                {% if login_user %}
+                                    <li>
+                                        <a href="#">Hello, {{ login_user }}</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ url_for('home.logout') }}">Logout</a>
+                                    </li>
+                                {% else %}
+                                    <li>
+                                        <a href="{{ url_for('home.login') }}">Login</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ url_for('home.register') }}">Sign up</a>
+                                    </li>
+                                {% endif %}
                             </ul>
                         </nav>
                     </div>
