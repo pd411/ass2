@@ -3,6 +3,7 @@ from wtforms import StringField, PasswordField, BooleanField, SubmitField
 from wtforms.validators import DataRequired, EqualTo, Email, Regexp, ValidationError
 from app.models import User
 
+
 class LoginForm(FlaskForm):
     username = StringField(
         label="Username",
@@ -38,11 +39,6 @@ class LoginForm(FlaskForm):
         }
     )
 
-    # def validate_name(self, field):
-    #     name = field.data
-    #     user = User.query.filter_by(name=name).count()
-    #     if user == 1:
-    #         raise ValidationError()
 
 class RegisterForm(FlaskForm):
     username = StringField(
@@ -67,14 +63,15 @@ class RegisterForm(FlaskForm):
 
     email = StringField(
         label='Email',
-        validators=[DataRequired("Please input email")],
+        validators=[
+            DataRequired("Please input email"),
+        ],
         description="email",
         render_kw={
             "class": "input100",
             "placeholder": "Enter email",
         },
     )
-
 
     submit = SubmitField(
         label='sign_up',

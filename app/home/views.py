@@ -18,7 +18,7 @@ def login():
     if form.validate_on_submit():
         data = form.data
         user = User.query.filter_by(username=data["username"]).first()
-        if not user.check_pwd(data["password"]):
+        if not user or not user.check_pwd(data["password"]):
             flash("Error password!", "err")
             return redirect(url_for("home.login"))
         session["user"] = user.username

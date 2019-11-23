@@ -47,16 +47,15 @@
 							</label>
 						</div>
                             {{ form.csrf_token }}
-{#						<div>#}
-{#							<a href="#" class="txt1">#}
-{#								Forgot Password?#}
-{#							</a>#}
-{#						</div>#}
 					</div>
 
 					<div class="container-login100-form-btn">
 						{{ form.submit }}
 					</div>
+
+                {% for msg in get_flashed_messages(category_filter=['err']) %}
+                    <p style="color: darkred;">{{ msg }}</p>
+                {% endfor %}
 				</form>
 			</div>
 		</div>
