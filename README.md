@@ -17,7 +17,7 @@ mysql的命令：
     mysql -uroot -p
 ``
 
-## api编写部分：
+## api编写部分:
 在app/admin/views.py
 
 ## 数据库的migrate:
@@ -31,3 +31,7 @@ mysql的命令：
 ``
     db.create_all()
 ``
+
+## 运行:
+分别运行admin/__init__.py的main函数和home/__init__.py
+网站端口分别是:8080和5000
