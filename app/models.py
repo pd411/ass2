@@ -2,16 +2,6 @@
 import datetime
 from app import db
 
-#
-class Role(db.Model):
-    __tablename__ = 'roles'
-    users = db.relationship('User', backref='role')
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(100), unique=True)
-
-    def __repr__(self):
-        return "<Role %r>" % self.name
-
 # 会员
 class User(db.Model):
     __tablename__ = "users"
@@ -19,7 +9,6 @@ class User(db.Model):
     username = db.Column(db.String(100), unique=True)  # 昵称
     pwd = db.Column(db.String(100))  # 密码
     email = db.Column(db.String(100), unique=True)  # 邮箱
-    role_id = db.Column(db.Integer, db.ForeignKey('roles.id'))
 
     # is_authenticated 方法有一个具有迷惑性的名称。
     # 一般而言，这个方法应该只返回 True，

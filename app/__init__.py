@@ -1,7 +1,6 @@
 # coding: utf-8
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-from flask_restplus import Resource, Api
 import os
 import pymysql
 
@@ -20,6 +19,4 @@ from app.home import home as home_blueprint
 
 homeApp.register_blueprint(home_blueprint)
 
-apiApp = Flask(__name__)
-api = Api(apiApp)
 

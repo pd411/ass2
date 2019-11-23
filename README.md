@@ -34,4 +34,5 @@ mysql的命令：
 
 ## 运行:
 分别运行admin/__init__.py的main函数和home/__init__.py
+
 网站端口分别是:8080和5000

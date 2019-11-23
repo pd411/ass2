@@ -21,7 +21,7 @@ def login():
         if not user.check_pwd(data["password"]):
             flash("Error password!", "err")
             return redirect(url_for("home.login"))
-        session["user"] = user.name
+        session["user"] = user.username
         session["user_id"] = user.id
         userlog = Userlog(
             user_id=user.id,
@@ -30,7 +30,7 @@ def login():
         db.session.add(userlog)
         db.session.commit()
         print(user)
-        return redirect(url_for("home/index.html"))
+        return redirect(url_for("home.index"))
     return render_template("home/login.html", form=form)
 
 
@@ -49,7 +49,6 @@ def register():
         user = User(
             username=data["username"],
             email=data["email"],
-            role_id=1,
             pwd=generate_password_hash(data["password"])
         )
         db.session.add(user)
